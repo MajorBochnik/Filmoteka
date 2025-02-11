@@ -4,14 +4,14 @@ public class Film {
     private int hodnoceni;
     private int pocetH;
 
-    Herec herec [];
+    private Herec herci [];
 
     public Film(String nazev, int rok, int hodnoceni, int pocetH) {
         this.nazev = nazev;
         this.rok = rok;
         this.hodnoceni = hodnoceni;
         this.pocetH = pocetH;
-        herec = new Herec[pocetH];
+        herci = new Herec[pocetH];
     }
 
 
@@ -38,5 +38,11 @@ public class Film {
     }
     public int getPocetH() {
         return pocetH;
+    }
+    public Herec[] getHerci() {
+        return herci;
+    }
+    public void setHerci(Herec[] herci) {
+        this.herci = herci;
     }
 }
