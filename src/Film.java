@@ -6,12 +6,11 @@ public class Film {
 
     private Herec herci [];
 
-    public Film(String nazev, int rok, int hodnoceni, int pocetH) {
+    public Film(String nazev, int rok, int hodnoceni, Herec [] herci) {
         this.nazev = nazev;
         this.rok = rok;
         this.hodnoceni = hodnoceni;
-        this.pocetH = pocetH;
-        herci = new Herec[pocetH];
+        this.herci = herci;
     }
 
 
@@ -44,5 +43,11 @@ public class Film {
     }
     public void setHerci(Herec[] herci) {
         this.herci = herci;
+    }
+
+    public void vypisHerce() {
+        for (int i = 0; i < herci.length; i++) {
+            System.out.println(herci[i].getJmeno());
+        }
     }
 }
